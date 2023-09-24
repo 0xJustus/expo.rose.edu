@@ -11,12 +11,18 @@
     <meta property="og:description" content="Located minutes from downtown Oklahoma City, Rose State College offers almost 60 degree programs to help jump start your future. Going somewhere starts here!">
     <meta property="og:image" content="https://okaerospacesummit.org/images/logo.png">
     <meta property="og:url" content="https://www.rose.edu/">
-
-    <meta http-equiv="Refresh" content="0; url='https://rose.edu'" />
 </head>
 
 <body>
-    <iframe src="https://www.rose.edu/" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
-        Your browser doesn't support iframes
-    </iframe>    
+    <iframe src="https://www.rose.edu/" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:-1;">
+    </iframe>
+
+    <!-- <iframe width="85%" height="800" style="display:block; border-style:none;"
+        src="https://www.youtube.com/embed/SYFA8lNfl6Q?autoplay=1&mute=1">
+    </iframe> -->
+
+    <canvas id="canvas"></canvas>
+    <script>
+        window.onload=function(){var t,e,n,o,i,a=document.getElementById("canvas");t=a,e=window.screen,n=t.width=e.width,o=t.height=e.height,i=Array(256).join(1).split(""),setInterval(function(){t.getContext("2d").fillStyle="rgba(0,0,0,0)",t.getContext("2d").fillRect(0,0,n,o),t.getContext("2d").fillStyle="#0F0",i.map(function(e,n){var o=String.fromCharCode(48+33*Math.random()),a=10*n;t.getContext("2d").fillText(o,a,e),i[n]=e>758+1e4*Math.random()?0:e+10})},60)};
+    </script>
 </body>
